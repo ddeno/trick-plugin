@@ -1,4 +1,5 @@
 package org.jenkinsci.plugins.trick;
+
 import hudson.Launcher;
 import hudson.Extension;
 import hudson.util.FormValidation;
@@ -11,6 +12,7 @@ import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.QueryParameter;
+import org.jenkinsci.plugins.trick.TrickTool;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -41,6 +43,8 @@ public class TrickBuilder extends Builder {
         this.name = name;
     }
 
+    public String trickTool = null;
+    
     public String getName() {
         return name;
     }
