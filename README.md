@@ -1,17 +1,17 @@
 Trick plugin
 ============
 
-Trick simulation build and execution support for Jenkins
+Trick simulation build and execution support for Jenkins.
 
 Master Branch
 =============
 
-The master branch of the plugin is designed as the primary release branch. All tagged and stable releases reside here.
+The **master** branch of the plugin is designed as the primary release branch. All tagged and stable releases reside here.
 
 Dev Branch
 ==========
 
-The dev branch is the primary development branch for the Trick plugin. Cloning from dev in order to create your feature/topic branches is preferred.
+The **dev** branch is the primary development branch for the Trick plugin. Cloning from dev in order to create your feature/topic branche is the ***preferred*** method.
 
 Contributing to the Plugin
 ==========================
