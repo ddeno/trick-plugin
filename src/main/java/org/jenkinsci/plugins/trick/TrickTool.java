@@ -53,6 +53,21 @@ public class TrickTool extends ToolInstallation implements NodeSpecific<TrickToo
 
     private static final long serialVersionUID = 1;
 
+    /** Global Trick environment variable settings */
+    public boolean m_global_env_vars = false;
+
+    /** Global Trick C flags */
+    public String m_global_cflags = "";
+
+    /** Global Trick C++ flags */
+    public String m_global_cxxflags = "";
+
+    /** Global Trick User Link Libs */
+    public String m_global_user_link_libs = "";
+
+    /** Global Trick Debug Flag */
+    public boolean m_global_debug = false;
+
     /**
      * getTrickHome.
      *
@@ -60,6 +75,52 @@ public class TrickTool extends ToolInstallation implements NodeSpecific<TrickToo
      */
     public String getTrickHome() {
         return getHome();
+    }
+
+    /**
+     * useGlobalEnvVars
+     *
+     * @return {@link java.lang.Boolean} that will be used to let the user set global environment variables for
+     *          specific Trick tool installations.
+     */
+    public Boolean useGlobalEnvVars() {
+        return m_global_env_vars;
+    }
+
+    /**
+     * getGlobalCFlags
+     *
+     * @return {@link java.lang.String} that will be used to prepend to Trick build step CFLAGS.
+     */
+    public String getGlobalCFlags() {
+        return m_global_cflags;
+    }
+
+    /**
+     * getGlobalCxxFlags
+     *
+     * @return {@link java.lang.String} that will be used to prepend to Trick build step CXXFLAGS.
+     */
+    public String getGlobalCxxFlags() {
+        return m_global_cxxflags;
+    }
+
+    /**
+     * getGlobalUserLinkLibs
+     *
+     * @return {@link java.lang.String} that will be used to prepend to Trick build step TRICK_USER_LINK_LIBS.
+     */
+    public String getGlobalUserLinkLibs() {
+        return m_global_user_link_libs;
+    }
+
+    /**
+     * getGlobalDebug
+     *
+     * @return {@link java.lang.Boolean} that will be used to set the Trick debug flag globally.
+     */
+    public Boolean getGlobalDebug() {
+        return m_global_debug;
     }
 
     private static TrickTool[] getInstallations(DescriptorImpl descriptor) {

@@ -3,9 +3,27 @@
     <f:entry title="${%Name}" field="name">
         <f:textbox />
     </f:entry>
-    <f:entry title="Path to Trick installation" field="home">
+    <f:entry title="Path to Installation" field="home">
         <f:textbox />
     </f:entry>
+
+    <f:block>
+        <f:optionalBlock name="trickTool.m_global_env_vars" title="Set global Trick environment variables" checked="${trickTool.useGlobalEnvVars}" field="m_global_env_vars">
+            <f:entry title="TRICK_CFLAGS" field="m_global_cflags">
+                <f:textbox />
+            </f:entry>
+            <f:entry title="TRICK_CXXFLAGS" field="m_global_cxxflags">
+                <f:textbox />
+            </f:entry>
+            <f:entry title="TRICK_USER_LINK_LIBS" field="m_global_user_link_libs">
+                <f:textbox />
+            </f:entry>
+            <f:entry title="TRICK_DEBUG" field="m_global_debug">
+                <f:textbox />
+            </f:entry>
+        </f:optionalBlock>
+    </f:block>
+
     <j:set var="toolDescriptor" value="${descriptor}" /><!-- to make this descriptor accessible from properties -->
     <f:descriptorList descriptors="${descriptor.propertyDescriptors}" field="properties"/>
 </j:jelly>
